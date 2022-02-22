@@ -213,6 +213,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4231847819508286576, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
+      propertyPath: _lookInCameraDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231847819508286579, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
     - target: {fileID: 4231847820450222761, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
       propertyPath: m_Name
       value: Player
