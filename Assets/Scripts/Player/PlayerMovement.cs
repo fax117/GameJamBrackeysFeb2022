@@ -20,7 +20,7 @@ public class PlayerMovement : CharacterMovement
         _rigidbody.interpolation = RigidbodyInterpolation2D.Interpolate;
         _rigidbody.gravityScale = 0f;
 
-        LookDirection = Vector3.right;
+        LookDirection = 0f;
     }
 
     protected override void FixedUpdate()
@@ -33,7 +33,7 @@ public class PlayerMovement : CharacterMovement
         if (_topDownMovement) forward = new Vector3(MoveInput.x, MoveInput.z, 0f);
         _rigidbody.AddForce(GetMovementAcceleration(forward, !_topDownMovement));
     }
-    
+
     protected override bool CheckGrounded()
     {
         // ignore ground checks if top-down
@@ -50,4 +50,5 @@ public class PlayerMovement : CharacterMovement
         // sends hit info for grounding resolution
         return ResolveGrounded(hits[0], hits[0].normal);
     }
+
 }
