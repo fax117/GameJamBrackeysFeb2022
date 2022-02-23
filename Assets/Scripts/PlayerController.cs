@@ -37,6 +37,11 @@ public class PlayerController : MonoBehaviour
         // placeholder for shooting stuff
     }
 
+    public void OnPause()
+    {
+
+    }
+
     private void Update()
     {
         if (_characterMovement == null) return;
