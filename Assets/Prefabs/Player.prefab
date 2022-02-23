@@ -225,7 +225,7 @@ MonoBehaviour:
   _speed: 5
   _acceleration: 10
   _turnSpeed: 10
-  _controlRotation: 0
+  _controlRotation: 1
   _gravity: 0
   _jumpHeight: 2.25
   _airControl: 0.1
