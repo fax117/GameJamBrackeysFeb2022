@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 using UnityEngine.InputSystem;
 #pragma warning disable 649
@@ -24,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        _moveInput = value.Get<Vector2>();
+       _moveInput = value.Get<Vector2>();
     }
 
     public void OnJump(InputValue value)
@@ -37,9 +39,12 @@ public class PlayerController : MonoBehaviour
         // placeholder for shooting stuff
     }
 
-    public void OnPause()
+    public void OnLook(InputValue value)
     {
-
+        Vector2 mouseScreenPos = value.Get<Vector2>();
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
+        
+        _characterMovement.SetLookDirection(mouseWorldPos);
     }
 
     private void Update()
@@ -51,10 +56,7 @@ public class PlayerController : MonoBehaviour
         Vector3 right = Camera.main.transform.right;
         Vector3 forward = Vector3.Cross(right, up);
         Vector3 moveInput = forward * _moveInput.y + right * _moveInput.x;
-
-        // send player input to character movement
+        
         _characterMovement.SetMoveInput(moveInput);
-        _characterMovement.SetLookDirection(moveInput);
-        if (_lookInCameraDirection) _characterMovement.SetLookDirection(Camera.main.transform.forward);
     }
 }

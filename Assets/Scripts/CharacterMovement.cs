@@ -34,7 +34,7 @@ public abstract class CharacterMovement : MonoBehaviour
     public Vector3 MoveInput { get; protected set; }
     public bool HasMoveInput { get; protected set; }
     public Vector3 LocalMoveInput { get; protected set; }
-    public Vector3 LookDirection { get; protected set; }
+    public float LookDirection { get; protected set; }
     public virtual Vector3 Velocity { get; protected set; }
     public Vector3 SurfaceVelocity { get; protected set; }
 
@@ -61,10 +61,10 @@ public abstract class CharacterMovement : MonoBehaviour
     }
 
     // sets character look direction, flattening y-value
-    public void SetLookDirection(Vector3 direction)
+    public void SetLookDirection( Vector3 MouseWorldPos)
     {
-        if (direction.magnitude < 0.1f) return;
-        LookDirection = new Vector3(direction.x, 0f, direction.z).normalized;
+        Vector3 targetDirection = MouseWorldPos - transform.position;
+        LookDirection = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
     }
 
     // attempts a jump, will fail if not grounded
@@ -82,9 +82,7 @@ public abstract class CharacterMovement : MonoBehaviour
         // rotates character towards movement direction
         if (_controlRotation && (IsGrounded || _airTurning))
         {
-            Quaternion targetRotation = Quaternion.LookRotation(LookDirection);
-            Quaternion rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.fixedDeltaTime * _turnSpeed * TurnSpeedMultiplier);
-            transform.rotation = rotation;
+           transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, LookDirection - 90)); 
         }
     }
 
