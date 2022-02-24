@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     public void OnFire(InputValue value)
     {
         // placeholder for shooting stuff
-        _shootingController.canShoot = !value.isPressed;
+        _shootingController.canShoot = value.Get<float>() > 0.5f;
     }
 
     public void OnLook(InputValue value)
@@ -64,5 +64,7 @@ public class PlayerController : MonoBehaviour
         Vector3 moveInput = forward * _moveInput.y + right * _moveInput.x;
         
         _characterMovement.SetMoveInput(moveInput);
+
+        if (_shootingController.canShoot) _shootingController.Shoot();
     }
 }

@@ -21,15 +21,6 @@ public class ShootingController : MonoBehaviour
         {
             _nextFire = Time.time + 60/rpm;
             GameObject g = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
-            g.SetActive(true);
         }
-    }
-
-    private void FixedUpdate()
-    {
-        if (true)
-        {
-           Shoot(); 
-        } 
     }
 }

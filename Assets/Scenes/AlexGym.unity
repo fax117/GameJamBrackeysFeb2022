@@ -427,6 +427,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 64171450431168471, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
+      propertyPath: rpm
+      value: 240
+      objectReference: {fileID: 0}
     - target: {fileID: 484499799532840066, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -486,6 +490,22 @@ PrefabInstance:
     - target: {fileID: 484499800337756699, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311611975589570017, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311611975589570017, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311611975589570017, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311611975589570017, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4037126444595824157, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
       propertyPath: m_Lens.OrthographicSize
