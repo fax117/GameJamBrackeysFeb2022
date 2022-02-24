@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 #pragma warning disable 649
 
@@ -16,12 +17,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool _lookInCameraDirection;
 
     private CharacterMovement _characterMovement;
+    private ShootingController _shootingController;
     private Vector2 _moveInput;
     private Vector3 _mouseWorldPos;
+    private bool shootActive = false;
 
     private void Awake()
     {
         _characterMovement = GetComponent<CharacterMovement>();
+        _shootingController = GetComponent<ShootingController>();
         Cursor.lockState = _cursorMode;
     }
 
@@ -38,6 +42,7 @@ public class PlayerController : MonoBehaviour
     public void OnFire(InputValue value)
     {
         // placeholder for shooting stuff
+        _shootingController.canShoot = !value.isPressed;
     }
 
     public void OnLook(InputValue value)
