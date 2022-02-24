@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private CharacterMovement _characterMovement;
     private Vector2 _moveInput;
+    private Vector3 _mouseWorldPos;
 
     private void Awake()
     {
@@ -42,9 +43,9 @@ public class PlayerController : MonoBehaviour
     public void OnLook(InputValue value)
     {
         Vector2 mouseScreenPos = value.Get<Vector2>();
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
+        _mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
         
-        _characterMovement.SetLookDirection(mouseWorldPos);
+        _characterMovement.SetLookDirection(_mouseWorldPos);
     }
 
     private void Update()
