@@ -49,6 +49,8 @@ GameObject:
   - component: {fileID: 64171450431168471}
   - component: {fileID: 4644599600696557838}
   - component: {fileID: 1192775631522209715}
+  - component: {fileID: 7983714404517922116}
+  - component: {fileID: 5288503271495870988}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -155,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d669c86e9847445cb16ad5dbdf910040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cursorMode: 2
+  _cursorMode: 0
   _lookInCameraDirection: 0
 --- !u!114 &484499799532840077
 MonoBehaviour:
@@ -288,8 +290,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: 0, y: 0.09}
+  m_Size: {x: 1, y: 1.65}
   m_Direction: 0
 --- !u!114 &484499799532840072
 MonoBehaviour:
@@ -332,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120ed8e500e8fca4f8806b0480edecdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rpm: 1
+  rpm: 240
   bullet: {fileID: 6585314559890847276, guid: b7654e72bc61cee44ac1d7ec21d253f6, type: 3}
   bulletSpawn: {fileID: 2311611975589570017}
 --- !u!114 &4644599600696557838
@@ -364,8 +366,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c97c1ca7550094dad815ac4494b95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  werewolf: {fileID: -7068237845259080724, guid: 161fcf32cd7361a49878f6a2d0274466, type: 3}
-  human: {fileID: 21300000, guid: b84e76bc3a1db6e47a3541be8792101c, type: 3}
+  _wolfModeDuration: 10
+  _cooldownTimer: 7
+--- !u!95 &7983714404517922116
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484499799532840074}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 838d2bdd4df263d42ac2c2e05a7f2cc8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5288503271495870988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484499799532840074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15581f010af84b6458136b9950d115fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dampTime: 0.1
 --- !u!1 &484499800337756699
 GameObject:
   m_ObjectHideFlags: 0
