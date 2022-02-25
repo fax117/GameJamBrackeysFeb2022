@@ -47,6 +47,8 @@ GameObject:
   - component: {fileID: 484499799532840079}
   - component: {fileID: 484499799532840072}
   - component: {fileID: 64171450431168471}
+  - component: {fileID: 4644599600696557838}
+  - component: {fileID: 1192775631522209715}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -109,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6a6def509bc0a5e428928bdd79bce93a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b84e76bc3a1db6e47a3541be8792101c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -333,6 +335,37 @@ MonoBehaviour:
   rpm: 1
   bullet: {fileID: 6585314559890847276, guid: b7654e72bc61cee44ac1d7ec21d253f6, type: 3}
   bulletSpawn: {fileID: 2311611975589570017}
+--- !u!114 &4644599600696557838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484499799532840074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec06f8b24f9dfc14a898331ed8a2a731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+  _curHealth: 10
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1192775631522209715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484499799532840074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c97c1ca7550094dad815ac4494b95c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  werewolf: {fileID: -7068237845259080724, guid: 161fcf32cd7361a49878f6a2d0274466, type: 3}
+  human: {fileID: 21300000, guid: b84e76bc3a1db6e47a3541be8792101c, type: 3}
 --- !u!1 &484499800337756699
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3383446969781562828}
   m_LocalRotation: {x: 0.011562094, y: -0.011689537, z: -0.7197673, w: 0.6940207}
-  m_LocalPosition: {x: 6.6186943, y: -1.9478087, z: -2.625592}
+  m_LocalPosition: {x: 6.6186943, y: -1.9478087, z: -2.6255915}
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1.0000001}
   m_Children:
   - {fileID: 6912638930466594101}
