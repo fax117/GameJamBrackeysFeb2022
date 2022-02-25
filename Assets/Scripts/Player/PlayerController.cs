@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     // make character look in Camera direction instead of MoveDirection
     [SerializeField] private bool _lookInCameraDirection;
 
+    private Animator _characterAnimator;
     private CharacterMovement _characterMovement;
     private ShootingController _shootingController;
     private Vector2 _moveInput;
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        _characterAnimator = GetComponent<Animator>();
         _characterMovement = GetComponent<CharacterMovement>();
         _shootingController = GetComponent<ShootingController>();
         Cursor.lockState = _cursorMode;
@@ -43,6 +45,12 @@ public class PlayerController : MonoBehaviour
     {
         // placeholder for shooting stuff
         _shootingController.canShoot = value.Get<float>() > 0.5f;
+
+        // Animation triggers
+        if (_shootingController.canShoot && _characterAnimator.GetBool("IsWerewolf"))
+            _characterAnimator.SetBool("IsAttacking", true);
+        else
+            _characterAnimator.SetBool("IsAttacking", false);
     }
 
     public void OnLook(InputValue value)
