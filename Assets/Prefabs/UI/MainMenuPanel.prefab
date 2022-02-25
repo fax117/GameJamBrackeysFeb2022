@@ -186,8 +186,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Werewolf In Paris
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cdecc88b9f668cd448ce3d17315b1266, type: 2}
-  m_sharedMaterial: {fileID: -3478512215610213009, guid: cdecc88b9f668cd448ce3d17315b1266, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9f3701afd0a2b4845bc8643185db57eb, type: 2}
+  m_sharedMaterial: {fileID: -8294840360378974172, guid: 9f3701afd0a2b4845bc8643185db57eb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -611,7 +611,7 @@ PrefabInstance:
     - target: {fileID: 3650638946915534434, guid: d450ffc47880b80409c0364df7727248, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -3478512215610213009, guid: cdecc88b9f668cd448ce3d17315b1266, type: 2}
+      objectReference: {fileID: -8294840360378974172, guid: 9f3701afd0a2b4845bc8643185db57eb, type: 2}
     - target: {fileID: 3650638946915534434, guid: d450ffc47880b80409c0364df7727248, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
