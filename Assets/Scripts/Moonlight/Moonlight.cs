@@ -6,13 +6,10 @@ using UnityEngine.Events;
 public class Moonlight : MonoBehaviour
 {
     [Header("Moonlight Params")]
-    [SerializeField] private float _energyGranted = 5.0f;
-    [SerializeField] private float _timeBetweenEachChargeUp = 0.5f;
+    [SerializeField] private float _energyGranted = 13.0f;
 
     private GameObject _player;
     private PlayerMoonlight _playerMoonlight;
-
-    private bool _isStandingOnMoonlight;
 
     private void Start()
     {
@@ -20,30 +17,21 @@ public class Moonlight : MonoBehaviour
         _playerMoonlight = _player.GetComponent<PlayerMoonlight>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (!collision.gameObject.CompareTag("Player")) return;
-        _isStandingOnMoonlight = true;
-        StartCoroutine(ChargeBar());
-    }
+        bool isOnCooldown = false;
+        bool isInWolfMode = false;
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (!collision.gameObject.CompareTag("Player")) return;
-        _isStandingOnMoonlight = false;
-        StopCoroutine(ChargeBar());
-    }
-
-    private IEnumerator ChargeBar()
-    {
-        while (true)
+        if (collision.gameObject.TryGetComponent(out TransformationController tc))
         {
-            if (_isStandingOnMoonlight)
-            {
-                _playerMoonlight.ChargeUp(_energyGranted);
-                yield return new WaitForSeconds(_timeBetweenEachChargeUp);
-            }
-            yield return null;
+            isOnCooldown = tc.IsOnCooldown;
+            isInWolfMode = tc.IsWolfModeActive;
         }
+
+        if (_playerMoonlight.Current == 0 && isInWolfMode) _playerMoonlight.ResetBar();
+
+        if (!collision.gameObject.CompareTag("Player") || isOnCooldown || isInWolfMode) return;
+
+        _playerMoonlight.ChargeUp(_energyGranted * Time.deltaTime);
     }
 }
