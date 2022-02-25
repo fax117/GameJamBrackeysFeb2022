@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class TransformationController : MonoBehaviour
 {
-
-    private SpriteRenderer _spriteRenderer;
-    public Sprite werewolf;
-    public Sprite human;
+    private Animator _characterAnimator;
 
     private void Start()
     {
-        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        _characterAnimator = GetComponent<Animator>();
     }
 
     public IEnumerator TransformCountdown()
     {
-        _spriteRenderer.sprite = werewolf; //here goes the animation human -> werewolf
+        _characterAnimator.SetTrigger("Transform"); //here goes the animation human -> werewolf
         yield return new WaitForSeconds(10);
-        _spriteRenderer.sprite = human; //here goes the animation werewolg -> human
+        _characterAnimator.SetTrigger("TransformToHuman"); //here goes the animation werewolg -> human
     }
 
     public void Test()

@@ -10,7 +10,6 @@ public class CharacterAnimations : MonoBehaviour
     private PlayerMoonlight _playerMoonlight;
     private CharacterMovement _characterMovement;
 
-    private bool locked = true;
 
     private void Start()
     {
@@ -22,7 +21,6 @@ public class CharacterAnimations : MonoBehaviour
     private void Update()
     {
         PlayerMoving();
-        Transform();
     }
 
     public void PlayerMoving()
@@ -33,25 +31,14 @@ public class CharacterAnimations : MonoBehaviour
         _characterAnimator.SetFloat("Speed", speed);
     }
 
-    public void Transform()
-    {
-        
-        bool isWerewolf = _playerMoonlight.Percentage == 1;
-
-        if (isWerewolf)
-        {
-            _characterAnimator.SetTrigger("Transform");
-            //_characterAnimator.SetBool("IsWerewolf", isWerewolf);
-        }
-        else
-        {
-           // _characterAnimator.SetTrigger("TransformToHuman");
-        } 
-    }
-
     public void TransformAnimEnded()
     {
         _characterAnimator.SetBool("IsWerewolf", true);
+    }
+
+    public void TransformHumanAnimEnded()
+    {
+        _characterAnimator.SetBool("IsWerewolf", false);
     }
 
 }
