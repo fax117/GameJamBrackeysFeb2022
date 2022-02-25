@@ -1,7 +1,58 @@
 fileFormatVersion: 2
 guid: 161fcf32cd7361a49878f6a2d0274466
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7068237845259080724
+    second: Werewolf_Attacking_0
+  - first:
+      213: -986986852682082737
+    second: Werewolf_Attacking_1
+  - first:
+      213: -5068345180949939859
+    second: Werewolf_Attacking_2
+  - first:
+      213: 6954943967625547725
+    second: Werewolf_Attacking_3
+  - first:
+      213: -6098410869355896740
+    second: Werewolf_Attacking_4
+  - first:
+      213: 2730503578012898563
+    second: Werewolf_Attacking_5
+  - first:
+      213: 1059385228745889733
+    second: Werewolf_Attacking_6
+  - first:
+      213: -7805644427104849947
+    second: Werewolf_Attacking_7
+  - first:
+      213: 4378777921960783254
+    second: Werewolf_Attacking_8
+  - first:
+      213: -4653697920586167278
+    second: Werewolf_Attacking_9
+  - first:
+      213: -18178139708916849
+    second: Werewolf_Attacking_10
+  - first:
+      213: 1113001773210819593
+    second: Werewolf_Attacking_11
+  - first:
+      213: 5469410676594229646
+    second: Werewolf_Attacking_12
+  - first:
+      213: 2228776357205658168
+    second: Werewolf_Attacking_13
+  - first:
+      213: 8991790033769994138
+    second: Werewolf_Attacking_14
+  - first:
+      213: 747865862199744177
+    second: Werewolf_Attacking_15
+  - first:
+      213: -4731430479352112215
+    second: Werewolf_Attacking_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +83,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +92,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +119,31 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +152,364 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Werewolf_Attacking_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 784
+        width: 208
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb2c5df02398ed90800000000000000
+      internalID: -7068237845259080724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_1
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 782
+        width: 213
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4657efcfa48d42f0800000000000000
+      internalID: -986986852682082737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 779
+        width: 218
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d697a6249ee99a9b0800000000000000
+      internalID: -5068345180949939859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_3
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 785
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf011f80bce48060800000000000000
+      internalID: 6954943967625547725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_4
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 786
+        width: 194
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5029a500a71e5ba0800000000000000
+      internalID: -6098410869355896740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_5
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 529
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30554619982b4e520800000000000000
+      internalID: 2730503578012898563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_6
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 523
+        width: 218
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7d1bfa041b3be00800000000000000
+      internalID: 1059385228745889733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_7
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 526
+        width: 213
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef6867efb7cca390800000000000000
+      internalID: -7805644427104849947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_8
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 528
+        width: 208
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69dabccf15b84cc30800000000000000
+      internalID: 4378777921960783254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_9
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 526
+        width: 213
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ccc77c56eba6fb0800000000000000
+      internalID: -4653697920586167278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 267
+        width: 218
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8bf8f7041b6fbff0800000000000000
+      internalID: -18178139708916849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_11
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 273
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c5c9e373d227f00800000000000000
+      internalID: 1113001773210819593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_12
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 274
+        width: 194
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81c02d380047eb40800000000000000
+      internalID: 5469410676594229646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_13
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 273
+        width: 199
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a480fc9443eee10800000000000000
+      internalID: 2228776357205658168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_14
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 267
+        width: 218
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9712c9256149cc70800000000000000
+      internalID: 8991790033769994138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_15
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 14
+        width: 213
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b69e001a04f06a00800000000000000
+      internalID: 747865862199744177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werewolf_Attacking_16
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 16
+        width: 208
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abd2c61c05965eb0800000000000000
+      internalID: -4731430479352112215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

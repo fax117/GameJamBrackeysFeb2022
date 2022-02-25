@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: c298c7dde3bd17c4599b4e7aa7e8eabf
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7351242614344187765
+    second: Wolwerine_Walking_SpriteSheet_256X256_0
+  - first:
+      213: -169871174570618705
+    second: Wolwerine_Walking_SpriteSheet_256X256_1
+  - first:
+      213: -845364335996798484
+    second: Wolwerine_Walking_SpriteSheet_256X256_2
+  - first:
+      213: -562198735757784894
+    second: Wolwerine_Walking_SpriteSheet_256X256_3
+  - first:
+      213: 4854509358578483639
+    second: Wolwerine_Walking_SpriteSheet_256X256_4
+  - first:
+      213: -625980003322968388
+    second: Wolwerine_Walking_SpriteSheet_256X256_5
+  - first:
+      213: 2334156636752586975
+    second: Wolwerine_Walking_SpriteSheet_256X256_6
+  - first:
+      213: 2697435965749312434
+    second: Wolwerine_Walking_SpriteSheet_256X256_7
+  - first:
+      213: 3856536359012838828
+    second: Wolwerine_Walking_SpriteSheet_256X256_8
+  - first:
+      213: -8073082823969727751
+    second: Wolwerine_Walking_SpriteSheet_256X256_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +62,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +71,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +98,31 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +131,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Wolwerine_Walking_SpriteSheet_256X256_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 554
+        width: 208
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b800d427ac32bf990800000000000000
+      internalID: -7351242614344187765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolwerine_Walking_SpriteSheet_256X256_1
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 554
+        width: 209
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0d326111f74adf0800000000000000
+      internalID: -169871174570618705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolwerine_Walking_SpriteSheet_256X256_2
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 558
+        width: 209
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce970278d99a444f0800000000000000
+      internalID: -845364335996798484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolwerine_Walking_SpriteSheet_256X256_3
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 559
+        width: 205
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8cbfd7a3ba238f0800000000000000
+      internalID: -562198735757784894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolwerine_Walking_SpriteSheet_256X256_4
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 302
+        width: 206
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b141e49a8eae5340800000000000000
+      internalID: 4854509358578483639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolwerine_Walking_SpriteSheet_256X256_5
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 300
+        width: 215
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6cf69e0821057f0800000000000000
+      internalID: -625980003322968388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolwerine_Walking_SpriteSheet_256X256_6
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 302
+        width: 209
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd822cf1817946020800000000000000
+      internalID: 2334156636752586975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolwerine_Walking_SpriteSheet_256X256_7
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 303
+        width: 205
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbb9de18b73f6520800000000000000
+      internalID: 2697435965749312434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolwerine_Walking_SpriteSheet_256X256_8
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 46
+        width: 206
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cada65eb26b258530800000000000000
+      internalID: 3856536359012838828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wolwerine_Walking_SpriteSheet_256X256_9
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 44
+        width: 215
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa1af2d1f5a6ff80800000000000000
+      internalID: -8073082823969727751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
