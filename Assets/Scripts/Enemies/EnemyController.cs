@@ -7,21 +7,26 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private float attackRange;
     [SerializeField] private GameObject player;
+    private ShootingController shootingController;
 
     private void Start()
     {
-
         player = GameObject.FindGameObjectWithTag("Player");
+        shootingController = GetComponent<ShootingController>();
     }
 
     private void Update()
     {
-        print(Vector2.Distance(transform.position, player.transform.position));
-
-        if (Vector2.Distance(transform.position, player.transform.position) <= attackRange && Vector2.Distance(transform.position, player.transform.position) > attackRange*-1)
+       
+        if (Vector2.Distance(transform.position, player.transform.position) <= attackRange)
         {
             //Attack 
-            print("I'm Shooting");
+            shootingController.canShoot = true;
+            shootingController.Shoot();
+        }
+        else
+        {
+            shootingController.canShoot = false;
         }
     }
 
