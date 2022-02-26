@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4568051367933570553}
   m_Layer: 0
   m_Name: Moonlight
-  m_TagString: Untagged
+  m_TagString: Moonlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
