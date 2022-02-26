@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 9144061580131829463}
   - component: {fileID: 9136882325004835062}
   - component: {fileID: 981171504228428057}
+  - component: {fileID: 8215103661447445992}
   m_Layer: 0
   m_Name: ArmoredKnight
   m_TagString: Armor
@@ -301,3 +302,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.2}
   serializedVersion: 2
   m_Radius: 0.7
+--- !u!114 &8215103661447445992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144061580131829450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 126ce0e1818b7d74597f6dd110c221dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+  _curHealth: 0
+  _curArmor: 0
+  _maxArmor: 50
+  _timeBetweenDamage: 0.25
+  _characterRenderer: {fileID: 9144061579276704400}
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
