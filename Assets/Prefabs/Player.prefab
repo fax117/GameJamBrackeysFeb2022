@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 1192775631522209715}
   - component: {fileID: 7983714404517922116}
   - component: {fileID: 5288503271495870988}
+  - component: {fileID: 6431523707453893176}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -351,9 +352,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _curHealth: 10
+  _dmgDealtAccumulator: 0
   OnDamaged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 62b96ad138ee5344ca9fa5faec28e773, type: 2}
+        m_TargetAssemblyTypeName: GameEvent`1[[System.Single, mscorlib
+        m_MethodName: Invoke
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1192775631522209715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,6 +414,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dampTime: 0.1
+--- !u!114 &6431523707453893176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484499799532840074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c84d16473418e44a2ab0c75286e93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _baseDmgHuman: 1
+  _baseDmgWerewolf: 0.3
+  _armorDmgHuman: 0.25
+  _armorDmgWerewolf: 1.5
 --- !u!1 &484499800337756699
 GameObject:
   m_ObjectHideFlags: 0

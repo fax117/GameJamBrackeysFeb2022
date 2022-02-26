@@ -6,7 +6,7 @@ using UnityEngine;
 public class ShootingController : MonoBehaviour
 {
     [Header("Bullet options")] 
-    [SerializeField] protected float rpm = 1f;
+    public float rpm = 1f;
 
     [Header("Bullet GameObjects")] 
     [SerializeField] protected GameObject bullet;
