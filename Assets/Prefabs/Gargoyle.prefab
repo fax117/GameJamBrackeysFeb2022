@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7166270530283982829}
   m_Layer: 0
   m_Name: Gargoyle
-  m_TagString: Enemy
+  m_TagString: Gargoyle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

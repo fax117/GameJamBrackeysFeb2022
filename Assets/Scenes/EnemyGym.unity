@@ -435,6 +435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArmoredKnight
       objectReference: {fileID: 0}
+    - target: {fileID: 9144061580131829450, guid: 9ab745142dc7c2b41a73783991e46374, type: 3}
+      propertyPath: m_TagString
+      value: Armor
+      objectReference: {fileID: 0}
     - target: {fileID: 9144061580131829460, guid: 9ab745142dc7c2b41a73783991e46374, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -551,6 +555,10 @@ PrefabInstance:
     - target: {fileID: 1553861845565496252, guid: b27f2a9ad27293b4eaa21fb23b2061ab, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553861845565496252, guid: b27f2a9ad27293b4eaa21fb23b2061ab, type: 3}
+      propertyPath: m_TagString
+      value: Gargoyle
       objectReference: {fileID: 0}
     - target: {fileID: 4600257537679238350, guid: b27f2a9ad27293b4eaa21fb23b2061ab, type: 3}
       propertyPath: rpm

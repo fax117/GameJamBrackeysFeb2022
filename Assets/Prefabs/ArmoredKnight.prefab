@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 981171504228428057}
   m_Layer: 0
   m_Name: ArmoredKnight
-  m_TagString: Enemy
+  m_TagString: Armor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
