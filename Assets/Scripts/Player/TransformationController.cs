@@ -8,6 +8,10 @@ public class TransformationController : MonoBehaviour
     [SerializeField] private float _cooldownTimer = 7f;
 
     private Animator _characterAnimator;
+    private ShootingController _shootingController;
+    private PlayerHealth _playerHealth;
+
+    private float lifeDrained;
 
     public bool IsWolfModeActive { get; set; } = false;
     public bool IsOnCooldown { get; set; } = false;
@@ -15,6 +19,9 @@ public class TransformationController : MonoBehaviour
     private void Start()
     {
         _characterAnimator = GetComponent<Animator>();
+        _shootingController = GetComponent<ShootingController>();
+        _playerHealth = GetComponent<PlayerHealth>();
+
     }
 
     private IEnumerator OnCooldown()
@@ -27,10 +34,13 @@ public class TransformationController : MonoBehaviour
     private IEnumerator TransformCountdown()
     {
         IsWolfModeActive = true;
-        _characterAnimator.SetTrigger("Transform"); //here goes the animation human -> werewolf
+        _characterAnimator.SetTrigger("Transform");
+        _shootingController.rpm = 360; //might go on damage controller for tweaking
         yield return new WaitForSeconds(_wolfModeDuration);
-        _characterAnimator.SetTrigger("TransformToHuman"); //here goes the animation werewolg -> human
+        _characterAnimator.SetTrigger("TransformToHuman"); 
         IsWolfModeActive = false;
+        _shootingController.rpm = 240;
+        _playerHealth.GetHealth(_playerHealth._dmgDealtAccumulator);
     }
 
     public void CallTransformCountdownCoroutine()
@@ -43,8 +53,4 @@ public class TransformationController : MonoBehaviour
         StartCoroutine(OnCooldown());
     }
 
-    public void Test()
-    {
-        Debug.Log("Funciona");
-    }
 }
