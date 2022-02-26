@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -10,26 +11,31 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float _curHealth = 10f;
 
     [SerializeField] private float _timeBetweenDamage = 0.25f;
-    [SerializeField] private Sprite _playerDeath;
-    
-    private SpriteRenderer _characterRenderer;
+    [SerializeField] private SpriteRenderer _characterRenderer;
+
+    private Animator _characterAnimations;
+    private bool _isDead = false;
 
     public float Percentage => _curHealth / _maxHealth;
     public float Current => _curHealth;
+    public bool IsDead => _isDead;
 
     public UnityEvent<float> OnDamaged;
+    public UnityEvent OnDeath;
 
     private void Start()
     {
+        _characterAnimations = GetComponent<Animator>();
         _characterRenderer = GetComponent<SpriteRenderer>();
+        _isDead = false;
     }
 
     public void DealDamage(float damageValue)
     {
+        FlashOnDamage();
         _curHealth = Mathf.Clamp(_curHealth - damageValue, 0f, _maxHealth);
         OnDamaged.Invoke(Percentage);
 
-        if (_curHealth <= 0) _characterRenderer.sprite = _playerDeath;
     }
 
     public void GetHealth(float healingValue)
@@ -51,11 +57,27 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(FlashOnDamageCoroutine());
     }
 
+    public void PlayerDeath()
+    {
+        if (Current <= 0) 
+        {
+            _isDead = true;
+            _characterAnimations.SetTrigger("IsDead");
+            StartCoroutine(DeathTimer());
+            OnDeath.Invoke();
+        } 
+    }
+
+    private IEnumerator DeathTimer()
+    {
+        yield return new WaitForSeconds(5.0f);
+    }
+
     //debugging
     public void OnDebug()
     {
         //DealDamage(Random.Range(5, 15));
-        GetHealth(5);
+        DealDamage(5);
     }
 
 

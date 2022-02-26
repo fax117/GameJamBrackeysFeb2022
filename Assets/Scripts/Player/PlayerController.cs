@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     private Animator _characterAnimator;
     private CharacterMovement _characterMovement;
+    private PlayerHealth _playerHealth;
     private ShootingController _shootingController;
     private Vector2 _moveInput;
     private Vector3 _mouseWorldPos;
@@ -27,12 +28,15 @@ public class PlayerController : MonoBehaviour
     {
         _characterAnimator = GetComponent<Animator>();
         _characterMovement = GetComponent<CharacterMovement>();
+        _playerHealth = GetComponent<PlayerHealth>();
         _shootingController = GetComponent<ShootingController>();
         Cursor.lockState = _cursorMode;
     }
 
     public void OnMove(InputValue value)
     {
+        if (_playerHealth.IsDead) return;
+
        _moveInput = value.Get<Vector2>();
     }
 
@@ -43,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnFire(InputValue value)
     {
+        if (_playerHealth.IsDead) return;
         // placeholder for shooting stuff
         _shootingController.canShoot = value.Get<float>() > 0.5f;
 
@@ -55,6 +60,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnLook(InputValue value)
     {
+        if (_playerHealth.IsDead) return;
         Vector2 mouseScreenPos = value.Get<Vector2>();
         _mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
         

@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/GAME/MainMenu.unity
+    guid: 52ece7c796b0cd548959372ce37feeb1
+  - enabled: 1
+    path: Assets/Scenes/AlexGym.unity
+    guid: c983684b566d4bc4cba1e866e3dea380
   m_configObjects: {}
