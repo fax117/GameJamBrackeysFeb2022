@@ -36,7 +36,7 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         _characterAnimations = GetComponent<Animator>();
-        _characterRenderer = GetComponentInChildren<SpriteRenderer>();
+        _characterRenderer = GetComponent<SpriteRenderer>();
         _damageController = GetComponent<DamageController>();
         _audioEffects = GetComponent<PlayerAudioEffects>();
 
@@ -57,7 +57,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void DealDamage(float damageValue, float armorDamage)
     {
-        _audioEffects.HurtEffect();
+        //_audioEffects.HurtEffect();
         if(CurrentAP <= 0)
         {
             FlashOnDamage();

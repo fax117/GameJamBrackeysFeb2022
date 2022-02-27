@@ -317,6 +317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4644599600696557838, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
+      propertyPath: _curHealth
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
 --- !u!1 &1009009734
@@ -591,6 +595,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1955231177}
     m_Modifications:
+    - target: {fileID: 8215103661447445992, guid: 9ab745142dc7c2b41a73783991e46374, type: 3}
+      propertyPath: _curArmor
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215103661447445992, guid: 9ab745142dc7c2b41a73783991e46374, type: 3}
+      propertyPath: _curHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 9144061580131829450, guid: 9ab745142dc7c2b41a73783991e46374, type: 3}
       propertyPath: m_Name
       value: ArmoredKnight
@@ -789,6 +801,78 @@ Transform:
   m_Father: {fileID: 1544948829}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1907906014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1907906016}
+  - component: {fileID: 1907906015}
+  m_Layer: 0
+  m_Name: Global Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1907906015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907906014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 4
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!4 &1907906016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907906014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.317269, y: 2.7632024, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1955231176
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +912,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1955231177}
     m_Modifications:
+    - target: {fileID: 452661507551362181, guid: b27f2a9ad27293b4eaa21fb23b2061ab, type: 3}
+      propertyPath: _curArmor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452661507551362181, guid: b27f2a9ad27293b4eaa21fb23b2061ab, type: 3}
+      propertyPath: _curHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1553861845565496249, guid: b27f2a9ad27293b4eaa21fb23b2061ab, type: 3}
       propertyPath: m_RootOrder
       value: 0

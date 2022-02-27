@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rpm: 240
-  bullet: {fileID: 6585314559890847276, guid: b7654e72bc61cee44ac1d7ec21d253f6, type: 3}
+  bullet: {fileID: 6585314559890847276, guid: dc91c8ba1788fb9409907a89f3595984, type: 3}
   bulletSpawn: {fileID: 2311611975589570017}
 --- !u!114 &4644599600696557838
 MonoBehaviour:
