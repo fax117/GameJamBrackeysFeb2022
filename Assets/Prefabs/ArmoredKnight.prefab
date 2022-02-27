@@ -328,6 +328,7 @@ MonoBehaviour:
   rpm: 50
   bullet: {fileID: 854487710454383569, guid: 3d17b630eb550c543ac94f5e1d6c8e55, type: 3}
   bulletSpawn: {fileID: 2971279368174751289}
+  _muzzleFlash: {fileID: 0}
 --- !u!50 &9136882325004835062
 Rigidbody2D:
   serializedVersion: 4
@@ -383,7 +384,9 @@ MonoBehaviour:
   _curArmor: 0
   _timeBetweenDamage: 0.25
   _characterRenderer: {fileID: 0}
-  _isDead: 0
+  _gargoyleHit: {fileID: 8665381303066523658, guid: 49cd580a4f7e9eb41800c5b4436e99b2, type: 3}
+  _armoredHit: {fileID: 7989218501663615344, guid: aabe0339d99e46f44b387d695cbe3321, type: 3}
+  _deathDust: {fileID: 2847915369093507479, guid: fdc7e9b1533ec7f40aeb16f0c5279832, type: 3}
   OnDamaged:
     m_PersistentCalls:
       m_Calls: []
