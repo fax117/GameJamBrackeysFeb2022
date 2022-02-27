@@ -377,9 +377,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126ce0e1818b7d74597f6dd110c221dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _maxHealth: 10
   _curHealth: 0
-  _maxArmor: 50
+  _maxArmor: 10
   _curArmor: 0
   _timeBetweenDamage: 0.25
   _characterRenderer: {fileID: 0}
