@@ -42,7 +42,7 @@ namespace DefaultNamespace
 
         private void IdentifyTarget(GameObject target)
         {
-            //If A bullte hits an enemy
+            //If A bullet hits an enemy
             if (target.CompareTag("Armor") || target.CompareTag("Gargoyle"))
             {
                 _enemyHealth = target.GetComponent<EnemyHealth>();
@@ -64,17 +64,12 @@ namespace DefaultNamespace
                     _enemyHealth.DealDamage(_damageController._baseDmgHuman, _damageController._armorDmgHuman);
                 }
             } 
-            // If a bullet hits a player
-            else if (target.CompareTag("Player"))
-            {
-                _playerHealth.DealDamage(_damageController._enemyDamageToPlayer);
-            }
 
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            //This may change a little when enemies are added. Otherwise enemy's bullets will not hit player;
+         
             GameObject collisionGO = collision.gameObject;
 
             if(!collisionGO.CompareTag("Moonlight") && !collisionGO.CompareTag("Trigger"))
