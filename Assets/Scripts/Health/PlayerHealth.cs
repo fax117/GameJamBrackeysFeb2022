@@ -17,12 +17,6 @@ public class PlayerHealth : MonoBehaviour
     private Animator _characterAnimations;
     private bool _isDead = false;
 
-    [SerializeField] private float _timeBetweenDamage = 0.25f;
-    [SerializeField] private SpriteRenderer _characterRenderer;
-
-    private Animator _characterAnimations;
-    private bool _isDead = false;
-
     public float Percentage => _curHealth / _maxHealth;
     public float Current => _curHealth;
     public bool IsDead => _isDead;
