@@ -12,7 +12,6 @@ public class ColliderTrigger : MonoBehaviour
         PlayerController player = collider.GetComponent<PlayerController>();
         if(player != null)
         {
-            Debug.Log("Player inside trigger");
             OnPlayerEnterTrigger?.Invoke(this, EventArgs.Empty);
         }
     }

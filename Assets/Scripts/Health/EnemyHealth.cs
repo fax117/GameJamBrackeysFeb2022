@@ -16,8 +16,8 @@ public class EnemyHealth : MonoBehaviour
 
     private DamageController _damageController;
 
-    private Animator _characterAnimations;
-    private bool _isDead = false;
+    //private Animator _characterAnimations;
+    public bool _isDead = false;
 
     public float PercentageHP => _curHealth / _maxHealth;
     public float PercentageAP => _curArmor / _maxArmor;
@@ -34,7 +34,7 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _characterAnimations = GetComponent<Animator>();
+        //_characterAnimations = GetComponent<Animator>();
         _characterRenderer = GetComponentInChildren<SpriteRenderer>();
         _damageController = GetComponent<DamageController>();
 
@@ -50,7 +50,6 @@ public class EnemyHealth : MonoBehaviour
             
         else
             armored = false;
-
     }
 
     public void DealDamage(float damageValue, float armorDamage)
@@ -93,9 +92,10 @@ public class EnemyHealth : MonoBehaviour
         if (CurrentHP <= 0)
         {
             _isDead = true;
-            _characterAnimations.SetTrigger("IsDead");
+            //_characterAnimations.SetTrigger("IsDead");
             StartCoroutine(DeathTimer());
             OnDeath.Invoke();
+            Destroy(gameObject);
         }
     }
 

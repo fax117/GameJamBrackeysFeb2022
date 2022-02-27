@@ -9,6 +9,8 @@ TagManager:
   - Armor
   - Moonlight
   - Trigger
+  - Obstacles
+  - FinalRoom
   layers:
   - Default
   - TransparentFX
@@ -17,9 +19,9 @@ TagManager:
   - Water
   - UI
   - 
+  - Enemies
   - 
-  - 
-  - 
+  - Decoration
   - Obstacles
   - 
   - 

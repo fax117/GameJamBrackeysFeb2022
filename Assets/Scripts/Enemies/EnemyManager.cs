@@ -6,10 +6,24 @@ public class EnemyManager : MonoBehaviour
 {
     public Transform[] _spawners;
     public GameObject enemyPrefab;
+    private int gargoyles;
+    private int armors;
+    public int totalEnemies;
+
+    public int CountEnemies()
+    {
+        gargoyles = GameObject.FindGameObjectsWithTag("Gargoyle").Length;
+        armors = GameObject.FindGameObjectsWithTag("Armor").Length;
+
+        return gargoyles + armors;
+    }
 
     public void SpawnEnemies()
     {
-        Instantiate(enemyPrefab, _spawners[0].transform.position, Quaternion.identity);
+        foreach (Transform spawner in _spawners)
+        {
+            Instantiate(enemyPrefab, spawner.transform.position, Quaternion.identity);
+        }
     }
 
 }
