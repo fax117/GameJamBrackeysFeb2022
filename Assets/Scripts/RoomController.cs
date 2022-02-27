@@ -81,7 +81,7 @@ public class RoomController : MonoBehaviour
         return true;
     }
 
-    public void endGame()
+    public void EndGame()
     {
         youWinUI.SetActive(true);
     }

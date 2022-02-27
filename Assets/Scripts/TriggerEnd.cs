@@ -9,6 +9,6 @@ public class TriggerEnd : MonoBehaviour
     [SerializeField] RoomController roomController;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        roomController.endGame();   
+        roomController.EndGame();   
     }
 }

@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120ed8e500e8fca4f8806b0480edecdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rpm: 60
+  rpm: 40
   bullet: {fileID: 6585314559890847276, guid: b7654e72bc61cee44ac1d7ec21d253f6, type: 3}
   bulletSpawn: {fileID: 7919823582960362131}
   _muzzleFlash: {fileID: 0}
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126ce0e1818b7d74597f6dd110c221dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 10
+  _maxHealth: 7
   _curHealth: 0
   _maxArmor: 0
   _curArmor: 0
@@ -214,6 +214,7 @@ MonoBehaviour:
   _gargoyleHit: {fileID: 8665381303066523658, guid: 49cd580a4f7e9eb41800c5b4436e99b2, type: 3}
   _armoredHit: {fileID: 7989218501663615344, guid: aabe0339d99e46f44b387d695cbe3321, type: 3}
   _deathDust: {fileID: 2847915369093507479, guid: fdc7e9b1533ec7f40aeb16f0c5279832, type: 3}
+  _isDead: 0
   OnDamaged:
     m_PersistentCalls:
       m_Calls: []

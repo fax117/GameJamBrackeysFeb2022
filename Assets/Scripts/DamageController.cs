@@ -12,6 +12,6 @@ public class DamageController : MonoBehaviour
     public float _armorDmgWerewolf = 1.5f;
 
     //Enemies
-    public float _enemyDamageToPlayer = 10f;
+    public float _enemyDamageToPlayer = 5f;
 
 }
