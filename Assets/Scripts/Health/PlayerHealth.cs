@@ -9,6 +9,13 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private float _maxHealth = 100f;
     [SerializeField] private float _curHealth = 10f;
+    public float _dmgDealtAccumulator = 0f;
+
+    [SerializeField] private float _timeBetweenDamage = 0.25f;
+    [SerializeField] private SpriteRenderer _characterRenderer;
+
+    private Animator _characterAnimations;
+    private bool _isDead = false;
 
     [SerializeField] private float _timeBetweenDamage = 0.25f;
     [SerializeField] private SpriteRenderer _characterRenderer;
@@ -36,6 +43,11 @@ public class PlayerHealth : MonoBehaviour
         _curHealth = Mathf.Clamp(_curHealth - damageValue, 0f, _maxHealth);
         OnDamaged.Invoke(Percentage);
 
+    }
+
+    public void AccumulateHealth(float dmgDealt)
+    {
+        _dmgDealtAccumulator = Mathf.Clamp(_dmgDealtAccumulator + dmgDealt, 0f, _maxHealth);
     }
 
     public void GetHealth(float healingValue)

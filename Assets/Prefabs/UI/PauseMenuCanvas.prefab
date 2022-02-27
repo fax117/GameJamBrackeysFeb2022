@@ -503,6 +503,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Return to Main Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 3650638946915534434, guid: d450ffc47880b80409c0364df7727248, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3650638946915534434, guid: d450ffc47880b80409c0364df7727248, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 3650638947708846674, guid: d450ffc47880b80409c0364df7727248, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -621,6 +629,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Resume
       objectReference: {fileID: 0}
+    - target: {fileID: 3650638946915534434, guid: d450ffc47880b80409c0364df7727248, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3650638946915534434, guid: d450ffc47880b80409c0364df7727248, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 3650638947708846674, guid: d450ffc47880b80409c0364df7727248, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -836,6 +852,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Quit to Desktop
       objectReference: {fileID: 0}
+    - target: {fileID: 3650638946915534434, guid: d450ffc47880b80409c0364df7727248, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3650638946915534434, guid: d450ffc47880b80409c0364df7727248, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 3650638947708846674, guid: d450ffc47880b80409c0364df7727248, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
