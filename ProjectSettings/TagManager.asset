@@ -9,6 +9,7 @@ TagManager:
   - Armor
   - Moonlight
   - Trigger
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
