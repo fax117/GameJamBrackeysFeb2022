@@ -18,18 +18,22 @@ public class PlayerController : MonoBehaviour
 
     private Animator _characterAnimator;
     private CharacterMovement _characterMovement;
+    private PlayerAudioEffects _playerAudioEffects;
     private PlayerHealth _playerHealth;
     private ShootingController _shootingController;
     private Vector2 _moveInput;
     private Vector3 _mouseWorldPos;
     private bool shootActive = false;
+    private AudioSource _audioSource;
 
     private void Awake()
     {
         _characterAnimator = GetComponent<Animator>();
         _characterMovement = GetComponent<CharacterMovement>();
+        _playerAudioEffects = GetComponent<PlayerAudioEffects>();
         _playerHealth = GetComponent<PlayerHealth>();
         _shootingController = GetComponent<ShootingController>();
+        _audioSource = GetComponent<AudioSource>();
         Cursor.lockState = _cursorMode;
     }
 
@@ -56,6 +60,11 @@ public class PlayerController : MonoBehaviour
             _characterAnimator.SetBool("IsAttacking", true);
         else
             _characterAnimator.SetBool("IsAttacking", false);
+        
+        if (_shootingController.canShoot)
+            _playerAudioEffects.ShootingEffect();
+        else
+            _playerAudioEffects.PauseEffect();
     }
 
     public void OnLook(InputValue value)

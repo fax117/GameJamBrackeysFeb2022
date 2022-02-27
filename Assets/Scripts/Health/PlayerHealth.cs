@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private SpriteRenderer _characterRenderer;
 
     private Animator _characterAnimations;
+    private PlayerAudioEffects _audioEffects;
     private bool _isDead = false;
 
     public float Percentage => _curHealth / _maxHealth;
@@ -24,16 +25,21 @@ public class PlayerHealth : MonoBehaviour
     public UnityEvent<float> OnDamaged;
     public UnityEvent OnDeath;
 
+    private AudioSource _audioSource;
+
     private void Start()
     {
         _characterAnimations = GetComponent<Animator>();
         _characterRenderer = GetComponent<SpriteRenderer>();
+        _audioEffects = GetComponent<PlayerAudioEffects>();
+        _audioSource = GetComponent<AudioSource>();
         _isDead = false;
     }
 
     public void DealDamage(float damageValue)
     {
         FlashOnDamage();
+        _audioEffects.HurtEffect();
         _curHealth = Mathf.Clamp(_curHealth - damageValue, 0f, _maxHealth);
         OnDamaged.Invoke(Percentage);
 
@@ -69,6 +75,7 @@ public class PlayerHealth : MonoBehaviour
         {
             _isDead = true;
             _characterAnimations.SetTrigger("IsDead");
+            _audioEffects.DyingEffect();
             StartCoroutine(DeathTimer());
             OnDeath.Invoke();
         } 
