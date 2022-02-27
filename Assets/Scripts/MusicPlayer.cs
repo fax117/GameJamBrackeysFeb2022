@@ -21,7 +21,6 @@ public class MusicPlayer : MonoBehaviour
         if (_pauseMenu.activeInHierarchy)
         {
             _audioSource.Pause();
-            
         }
         
         if (!_audioSource.isPlaying && !_pauseMenu.activeInHierarchy)
