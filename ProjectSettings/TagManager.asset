@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Gargoyle
+  - Armor
+  - Moonlight
+  - Trigger
+  - Obstacles
+  - FinalRoom
+  - PauseMenu
+  - YouWinMenu
   layers:
   - Default
   - TransparentFX
@@ -12,10 +21,10 @@ TagManager:
   - Water
   - UI
   - 
+  - Enemies
   - 
-  - 
-  - 
-  - 
+  - Decoration
+  - Obstacles
   - 
   - 
   - 
