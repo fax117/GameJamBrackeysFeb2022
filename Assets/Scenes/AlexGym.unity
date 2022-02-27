@@ -44072,6 +44072,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 484499799532840077, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
+      propertyPath: _dashCoolDown
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 484499800337756698, guid: 547ec1390fe82a34cbc7047a216865bc, type: 3}
       propertyPath: m_RootOrder
       value: 5

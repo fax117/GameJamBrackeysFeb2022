@@ -66,7 +66,6 @@ public class EnemyHealth : MonoBehaviour
         {
             if (gameObject.CompareTag("Armor")) Instantiate(_armoredHit, transform.position, transform.rotation);
             else Instantiate(_gargoyleHit, transform.position, transform.rotation);
-            FlashOnDamage();
             _curHealth = Mathf.Clamp(_curHealth - damageValue, 0f, _maxHealth);
             OnDamaged.Invoke(PercentageHP);
         }
@@ -79,23 +78,8 @@ public class EnemyHealth : MonoBehaviour
     public void DealDamageArmor(float damageValue)
     {
         Instantiate(_armoredHit, transform.position, transform.rotation);
-        FlashOnDamage();
         _curArmor = Mathf.Clamp(_curArmor - damageValue, 0f, _maxArmor);
         OnDamaged.Invoke(PercentageAP);
-    }
-
-
-    private IEnumerator FlashOnDamageCoroutine()
-    {
-        Color originalColor = _characterRenderer.color;
-        _characterRenderer.color = Color.red;
-        yield return new WaitForSeconds(_timeBetweenDamage);
-        _characterRenderer.color = originalColor;
-    }
-
-    public void FlashOnDamage()
-    {
-        StartCoroutine(FlashOnDamageCoroutine());
     }
 
     public void Death()

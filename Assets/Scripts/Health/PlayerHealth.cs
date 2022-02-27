@@ -39,7 +39,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void DealDamage(float damageValue)
     {
-        FlashOnDamage();
         Instantiate(_bloodEffect, gameObject.transform.position, gameObject.transform.rotation);
         _audioEffects.HurtEffect();
         _curHealth = Mathf.Clamp(_curHealth - damageValue, 0f, _maxHealth);
@@ -56,19 +55,6 @@ public class PlayerHealth : MonoBehaviour
     {
         _curHealth = Mathf.Clamp(_curHealth + healingValue, 0f, _maxHealth);
         OnDamaged.Invoke(Percentage);
-    }
-
-    private IEnumerator FlashOnDamageCoroutine()
-    {
-        Color originalColor = _characterRenderer.color;
-        _characterRenderer.color = Color.red;
-        yield return new WaitForSeconds(_timeBetweenDamage);
-        _characterRenderer.color = originalColor;
-    }
-
-    public void FlashOnDamage()
-    {
-        StartCoroutine(FlashOnDamageCoroutine());
     }
 
     public void PlayerDeath()
