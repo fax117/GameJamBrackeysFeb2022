@@ -10,6 +10,11 @@ public abstract class CharacterMovement : MonoBehaviour
     [SerializeField] protected float _acceleration = 10f;
     [SerializeField] protected float _turnSpeed = 10f;
     [SerializeField] protected bool _controlRotation = true;    // character turns towards movement direction
+    
+    [Header("Dash")] 
+    [SerializeField] protected float _dashSpeed = 10f;
+    [SerializeField] protected float _dashLenght = 1f;
+    [SerializeField] protected float _dashCoolDown= 1f;
 
     [Header("Airborne")]
     [SerializeField] protected float _gravity = -20f;       // custom gravity value
@@ -37,6 +42,8 @@ public abstract class CharacterMovement : MonoBehaviour
     public float LookDirection { get; protected set; }
     public virtual Vector3 Velocity { get; protected set; }
     public Vector3 SurfaceVelocity { get; protected set; }
+    public bool CanDash { get; set; }
+    public bool IsDashing { get; set; }
 
     // public properties
     public bool CanMove { get; set; } = true;
@@ -49,6 +56,8 @@ public abstract class CharacterMovement : MonoBehaviour
 
     // private fields
     protected float _lastGroundedTime;
+    private float _dashCounter;
+    private float _dashCoolCounter;
 
     // receives movement input and clamps it to prevent over-acceleration
     public virtual void SetMoveInput(Vector3 input)
@@ -83,6 +92,36 @@ public abstract class CharacterMovement : MonoBehaviour
         if (_controlRotation && (IsGrounded || _airTurning))
         {
            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, LookDirection - 90)); 
+        }
+        
+        if (CanDash) 
+        {
+            if (_dashCoolCounter <= 0 && _dashCounter <= 0)
+            {
+                _dashCounter = _dashLenght;
+                IsDashing = true;
+            }
+
+            if (_dashCounter > 0)
+            {
+                _dashCounter -= Time.deltaTime;
+
+                if (_dashCounter <= 0)
+                {
+                    IsDashing = false;
+                    _dashCoolCounter = _dashCoolDown;
+                }
+            }
+
+            if (_dashCoolCounter > 0)
+            {
+                _dashCoolCounter -= Time.deltaTime;
+
+                if (_dashCoolCounter <= 0)
+                {
+                    CanDash = false;
+                }
+            }
         }
     }
 

@@ -40,9 +40,9 @@ public class PlayerController : MonoBehaviour
        _moveInput = value.Get<Vector2>();
     }
 
-    public void OnJump(InputValue value)
+    public void OnDash(InputValue value)
     {
-        _characterMovement?.Jump();
+        _characterMovement.CanDash = value.isPressed;
     }
 
     public void OnFire(InputValue value)

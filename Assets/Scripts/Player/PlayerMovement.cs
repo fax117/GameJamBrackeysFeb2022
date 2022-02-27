@@ -31,7 +31,15 @@ public class PlayerMovement : CharacterMovement
         if (ForcedMovement > 0f) input = Vector3.right * ForcedMovement;
         Vector3 forward = Vector3.right * input.x;
         if (_topDownMovement) forward = new Vector3(MoveInput.x, MoveInput.z, 0f);
-        _rigidbody.AddForce(GetMovementAcceleration(forward, !_topDownMovement));
+        
+        if (IsDashing)
+        {
+            _rigidbody.AddForce(GetMovementAcceleration(forward * _dashSpeed, !_topDownMovement));
+        }
+        else
+        {
+            _rigidbody.AddForce(GetMovementAcceleration(forward, !_topDownMovement));
+        }
     }
 
     protected override bool CheckGrounded()

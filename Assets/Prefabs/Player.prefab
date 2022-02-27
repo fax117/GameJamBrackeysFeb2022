@@ -176,6 +176,9 @@ MonoBehaviour:
   _acceleration: 10
   _turnSpeed: 10
   _controlRotation: 1
+  _dashSpeed: 3
+  _dashLenght: 0.2
+  _dashCoolDown: 5
   _gravity: 0
   _jumpHeight: 2.25
   _airControl: 0.1
@@ -493,7 +496,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3383446969781562828}
   m_LocalRotation: {x: 0.011562094, y: -0.011689537, z: -0.7197673, w: 0.6940207}
-  m_LocalPosition: {x: 6.6186943, y: -1.9478087, z: -2.625592}
+  m_LocalPosition: {x: 6.6186943, y: -1.9478087, z: -2.6255915}
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1.0000001}
   m_Children:
   - {fileID: 6912638930466594101}
