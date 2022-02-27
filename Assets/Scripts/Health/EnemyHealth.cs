@@ -21,7 +21,7 @@ public class EnemyHealth : MonoBehaviour
     private DamageController _damageController;
     private PlayerAudioEffects _audioEffects;
 
-    //private Animator _characterAnimations;
+    private Animator _characterAnimations;
     public bool _isDead = false;
 
     public float PercentageHP => _curHealth / _maxHealth;

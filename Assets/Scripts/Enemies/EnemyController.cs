@@ -11,8 +11,6 @@ public class EnemyController : MonoBehaviour
     private ShootingController shootingController;
     private Animator _characterAnimator;
 
-    private Animator _characterAnimator;
-
     private void Start()
     {
         enemyHealth = GetComponent<EnemyHealth>();
