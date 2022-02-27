@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2955310541498295241}
   - component: {fileID: 7166270530283982829}
   - component: {fileID: 452661507551362181}
+  - component: {fileID: 285850557191805611}
   m_Layer: 0
   m_Name: Gargoyle
   m_TagString: Gargoyle
@@ -204,6 +205,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _curHealth: 0
+  _maxArmor: 0
+  _curArmor: 0
   _timeBetweenDamage: 0.25
   _characterRenderer: {fileID: 1553861846635797830}
   OnDamaged:
@@ -212,6 +215,25 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &285850557191805611
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553861845565496252}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5fe118029cb5e7c40baffe686dcbec8e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1553861846635797848
 GameObject:
   m_ObjectHideFlags: 0

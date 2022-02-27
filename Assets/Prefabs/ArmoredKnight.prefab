@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 9136882325004835062}
   - component: {fileID: 981171504228428057}
   - component: {fileID: 8215103661447445992}
+  - component: {fileID: 5849388304700769982}
   m_Layer: 0
   m_Name: ArmoredKnight
   m_TagString: Armor
@@ -316,8 +317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _curHealth: 0
-  _curArmor: 0
   _maxArmor: 50
+  _curArmor: 0
   _timeBetweenDamage: 0.25
   _characterRenderer: {fileID: 9144061579276704400}
   OnDamaged:
@@ -326,3 +327,22 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &5849388304700769982
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144061580131829450}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
