@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 50, y: 0}
-  m_SizeDelta: {x: 800, y: 300}
+  m_SizeDelta: {x: 800, y: 350}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &2136122585920027378
 CanvasRenderer:
@@ -72,10 +72,13 @@ MonoBehaviour:
 
     Fabricio Fuentes - AI Programmer
 
-    Natalia Guevara - General
-    Programmer
+    Mariana Guevara - Music
+    Composer
 
-    Sayit Alper Zini - Artist & Designer'
+    Natalia Guevara - General Programmer
+
+    Sayit Alper Zini - Artist
+    & Designer'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9f3701afd0a2b4845bc8643185db57eb, type: 2}
   m_sharedMaterial: {fileID: -8294840360378974172, guid: 9f3701afd0a2b4845bc8643185db57eb, type: 2}
@@ -209,17 +212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Alejandro Lopez - Character Programmer
-
-    Alejandro Moreno - Designer
-    & Programmer
-
-    Fabricio Fuentes - AI Programmer
-
-    Natalia Guevara - General
-    Programmer
-
-    Sayit Alper Zini - Artist & Designer'
+  m_text: "Pathfinding Project\nhttps://arongranberg.com/astar/\r\nBackground\nhttps://baukjespirit.newgrounds.com/\nSound\nhttps://www.zapsplat.com/\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9f3701afd0a2b4845bc8643185db57eb, type: 2}
   m_sharedMaterial: {fileID: -8294840360378974172, guid: 9f3701afd0a2b4845bc8643185db57eb, type: 2}

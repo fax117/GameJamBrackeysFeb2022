@@ -9,11 +9,11 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private GameObject player;
     private EnemyHealth enemyHealth;
     private ShootingController shootingController;
-
+    private Animator _characterAnimator;
 
     private void Start()
     {
-        enemyHealth = GetComponent<EnemyHealth>();
+        _characterAnimator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         shootingController = GetComponent<ShootingController>();
     }
@@ -23,7 +23,8 @@ public class EnemyController : MonoBehaviour
        
         if (Vector2.Distance(transform.position, player.transform.position) <= attackRange)
         {
-            //Attack 
+            //Attack
+            _characterAnimator.SetTrigger("Attack");
             shootingController.canShoot = true;
             shootingController.Shoot();
         }

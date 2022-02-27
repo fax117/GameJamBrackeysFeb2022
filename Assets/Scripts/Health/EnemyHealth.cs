@@ -15,6 +15,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private SpriteRenderer _characterRenderer;
 
     private DamageController _damageController;
+    private PlayerAudioEffects _audioEffects;
 
     //private Animator _characterAnimations;
     public bool _isDead = false;
@@ -34,9 +35,10 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //_characterAnimations = GetComponent<Animator>();
-        _characterRenderer = GetComponentInChildren<SpriteRenderer>();
+        _characterAnimations = GetComponent<Animator>();
+        _characterRenderer = GetComponent<SpriteRenderer>();
         _damageController = GetComponent<DamageController>();
+        _audioEffects = GetComponent<PlayerAudioEffects>();
 
         _isDead = false;
 
@@ -54,6 +56,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void DealDamage(float damageValue, float armorDamage)
     {
+        //_audioEffects.HurtEffect();
         if(CurrentAP <= 0)
         {
             FlashOnDamage();
