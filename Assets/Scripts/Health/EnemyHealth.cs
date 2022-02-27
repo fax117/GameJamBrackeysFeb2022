@@ -14,6 +14,10 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float _timeBetweenDamage = 0.25f;
     [SerializeField] private SpriteRenderer _characterRenderer;
 
+    [SerializeField] private ParticleSystem _gargoyleHit;
+    [SerializeField] private ParticleSystem _armoredHit;
+    [SerializeField] private ParticleSystem _deathDust;
+
     private DamageController _damageController;
     private PlayerAudioEffects _audioEffects;
 
@@ -60,6 +64,8 @@ public class EnemyHealth : MonoBehaviour
         //_audioEffects.HurtEffect();
         if(CurrentAP <= 0)
         {
+            if (gameObject.CompareTag("Armor")) Instantiate(_armoredHit, transform.position, transform.rotation);
+            else Instantiate(_gargoyleHit, transform.position, transform.rotation);
             FlashOnDamage();
             _curHealth = Mathf.Clamp(_curHealth - damageValue, 0f, _maxHealth);
             OnDamaged.Invoke(PercentageHP);
@@ -72,6 +78,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void DealDamageArmor(float damageValue)
     {
+        Instantiate(_armoredHit, transform.position, transform.rotation);
         FlashOnDamage();
         _curArmor = Mathf.Clamp(_curArmor - damageValue, 0f, _maxArmor);
         OnDamaged.Invoke(PercentageAP);
@@ -97,6 +104,7 @@ public class EnemyHealth : MonoBehaviour
         {
             _isDead = true;
             _characterAnimations.SetTrigger("IsDead");
+            Instantiate(_deathDust, transform.position, transform.rotation);
             StartCoroutine(DeathTimer());
             OnDeath.Invoke();
         }

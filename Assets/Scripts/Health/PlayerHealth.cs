@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private float _maxHealth = 100f;
     [SerializeField] private float _curHealth = 10f;
+    [SerializeField] private ParticleSystem _bloodEffect;
     public float _dmgDealtAccumulator = 0f;
 
     [SerializeField] private float _timeBetweenDamage = 0.25f;
@@ -39,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
     public void DealDamage(float damageValue)
     {
         FlashOnDamage();
+        Instantiate(_bloodEffect, gameObject.transform.position, gameObject.transform.rotation);
         _audioEffects.HurtEffect();
         _curHealth = Mathf.Clamp(_curHealth - damageValue, 0f, _maxHealth);
         OnDamaged.Invoke(Percentage);
