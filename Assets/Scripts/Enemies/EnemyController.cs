@@ -7,12 +7,13 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private float attackRange;
     [SerializeField] private GameObject player;
+    private EnemyHealth enemyHealth;
     private ShootingController shootingController;
-
     private Animator _characterAnimator;
 
     private void Start()
     {
+        enemyHealth = GetComponent<EnemyHealth>();
         _characterAnimator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         shootingController = GetComponent<ShootingController>();
@@ -31,6 +32,11 @@ public class EnemyController : MonoBehaviour
         else
         {
             shootingController.canShoot = false;
+        }
+
+        if(enemyHealth.CurrentHP <= 0)
+        {
+            enemyHealth.Death();
         }
     }
 

@@ -22,7 +22,7 @@ public class EnemyHealth : MonoBehaviour
     private PlayerAudioEffects _audioEffects;
 
     private Animator _characterAnimations;
-    private bool _isDead = false;
+    public bool _isDead = false;
 
     public float PercentageHP => _curHealth / _maxHealth;
     public float PercentageAP => _curArmor / _maxArmor;
@@ -56,7 +56,6 @@ public class EnemyHealth : MonoBehaviour
             
         else
             armored = false;
-
     }
 
     public void DealDamage(float damageValue, float armorDamage)
@@ -91,6 +90,7 @@ public class EnemyHealth : MonoBehaviour
             Instantiate(_deathDust, transform.position, transform.rotation);
             StartCoroutine(DeathTimer());
             OnDeath.Invoke();
+            Destroy(gameObject);
         }
     }
 

@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _curHealth: 10
+  _curHealth: 100
   _dmgDealtAccumulator: 0
   _timeBetweenDamage: 0.25
   _characterRenderer: {fileID: 0}
