@@ -48,10 +48,10 @@ GameObject:
   - component: {fileID: 484499799532840072}
   - component: {fileID: 64171450431168471}
   - component: {fileID: 4644599600696557838}
-  - component: {fileID: 1192775631522209715}
   - component: {fileID: 7983714404517922116}
   - component: {fileID: 5288503271495870988}
   - component: {fileID: 6431523707453893176}
+  - component: {fileID: 8546610915834416809}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -292,7 +292,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.09}
-  m_Size: {x: 1, y: 1.65}
+  m_Size: {x: 1, y: 1.1}
   m_Direction: 0
 --- !u!114 &484499799532840072
 MonoBehaviour:
@@ -353,6 +353,8 @@ MonoBehaviour:
   _maxHealth: 100
   _curHealth: 10
   _dmgDealtAccumulator: 0
+  _timeBetweenDamage: 0.25
+  _characterRenderer: {fileID: 0}
   OnDamaged:
     m_PersistentCalls:
       m_Calls:
@@ -368,20 +370,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1192775631522209715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484499799532840074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4c97c1ca7550094dad815ac4494b95c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _wolfModeDuration: 10
-  _cooldownTimer: 7
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &7983714404517922116
 Animator:
   serializedVersion: 3
@@ -430,6 +421,21 @@ MonoBehaviour:
   _baseDmgWerewolf: 0.3
   _armorDmgHuman: 0.25
   _armorDmgWerewolf: 1.5
+  _enemyDamageToPlayer: 10
+--- !u!114 &8546610915834416809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484499799532840074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6986361fcf35271458b055f644c72fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wolfModeDuration: 10
+  _cooldownTimer: 7
 --- !u!1 &484499800337756699
 GameObject:
   m_ObjectHideFlags: 0

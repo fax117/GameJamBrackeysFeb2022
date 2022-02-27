@@ -12,6 +12,8 @@ namespace DefaultNamespace
 
         private GameObject _player;
         private PlayerHealth _playerHealth;
+
+        private EnemyHealth _enemyHealth;
         private TransformationController _transformationController;
         private DamageController _damageController;
 
@@ -40,23 +42,47 @@ namespace DefaultNamespace
 
         private void IdentifyTarget(GameObject target)
         {
-            if(_transformationController.IsWolfModeActive == true)
+            //If A bullte hits an enemy
+            if (target.CompareTag("Armor") || target.CompareTag("Gargoyle"))
             {
-                if (target.tag == "Armor") _playerHealth.AccumulateHealth(_damageController._armorDmgWerewolf);
-                else if (target.tag == "Gargoyle") _playerHealth.AccumulateHealth(_damageController._baseDmgWerewolf);
+                _enemyHealth = target.GetComponent<EnemyHealth>();
+
+                //If Player is in Werewolf mode
+                if (_transformationController.IsWolfModeActive == true)
+                {
+                    // If Player is in werewolf, heals the damage depending on the type of enemy he hit
+                    if(target.CompareTag("Armor")) 
+                        _playerHealth.AccumulateHealth(_damageController._armorDmgWerewolf);
+                    else
+                        _playerHealth.AccumulateHealth(_damageController._baseDmgWerewolf);
+
+                    _enemyHealth.DealDamage(_damageController._baseDmgWerewolf, _damageController._armorDmgWerewolf);
+                }
+                // If player is in normal human mode
+                else
+                { 
+                    _enemyHealth.DealDamage(_damageController._baseDmgHuman, _damageController._armorDmgHuman);
+                }
+            } 
+            // If a bullet hits a player
+            else if (target.CompareTag("Player"))
+            {
+                _playerHealth.DealDamage(_damageController._enemyDamageToPlayer);
             }
+
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-           //this may change a little when enemies are added. Otherwise enemy's bullets will not hit player;
+            //This may change a little when enemies are added. Otherwise enemy's bullets will not hit player;
+            GameObject collisionGO = collision.gameObject;
 
-            if(collision.gameObject.tag != "Moonlight" && collision.gameObject.tag != "Player")
+            if(!collisionGO.CompareTag("Moonlight") && !collisionGO.CompareTag("Trigger"))
             {
-                IdentifyTarget(collision.gameObject);
+                IdentifyTarget(collisionGO);
                 Destroy(gameObject);
             }
-           
+
         }
 
     }

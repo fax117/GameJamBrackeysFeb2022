@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Gargoyle
   - Armor
+  - Moonlight
+  - Trigger
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float _timeBetweenDamage = 0.25f;
     [SerializeField] private SpriteRenderer _characterRenderer;
 
+    private DamageController _damageController;
+
     private Animator _characterAnimations;
     private bool _isDead = false;
 
@@ -33,12 +35,14 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         _characterAnimations = GetComponent<Animator>();
-        _characterRenderer = GetComponent<SpriteRenderer>();
+        _characterRenderer = GetComponentInChildren<SpriteRenderer>();
+        _damageController = GetComponent<DamageController>();
+
         _isDead = false;
 
         _curHealth = _maxHealth;
 
-        if (this.tag == "Armor")
+        if (this.gameObject.CompareTag("Armor"))
         {
             armored = true;
             _curArmor = _maxArmor;
@@ -49,14 +53,7 @@ public class EnemyHealth : MonoBehaviour
 
     }
 
-    public void DealDamageArmor(float damageValue)
-    {
-        FlashOnDamage();
-        _curArmor = Mathf.Clamp(_curArmor - damageValue, 0f, _maxArmor);
-        OnDamaged.Invoke(PercentageAP);
-    }
-
-    public void DealDamage(float damageValue)
+    public void DealDamage(float damageValue, float armorDamage)
     {
         if(CurrentAP <= 0)
         {
@@ -64,6 +61,17 @@ public class EnemyHealth : MonoBehaviour
             _curHealth = Mathf.Clamp(_curHealth - damageValue, 0f, _maxHealth);
             OnDamaged.Invoke(PercentageHP);
         }
+        else
+        {
+            DealDamageArmor(armorDamage);
+        }
+    }
+
+    public void DealDamageArmor(float damageValue)
+    {
+        FlashOnDamage();
+        _curArmor = Mathf.Clamp(_curArmor - damageValue, 0f, _maxArmor);
+        OnDamaged.Invoke(PercentageAP);
     }
 
 
