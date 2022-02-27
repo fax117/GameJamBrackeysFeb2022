@@ -86247,8 +86247,8 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6678473594478863358, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 6678473594478863354, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
+      propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6678473595038616530, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
@@ -86339,6 +86339,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndGameCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6678473595836486928, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
+      propertyPath: m_text
+      value: You win
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678473595836486928, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678473595836486928, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6678473595836486929, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -86353,7 +86365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6678473595836486929, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -193.33334
+      value: -253.33334
       objectReference: {fileID: 0}
     - target: {fileID: 7928332736617521710, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -86369,7 +86381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7928332736617521710, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -906.66675
+      value: -918.66675
       objectReference: {fileID: 0}
     - target: {fileID: 7928332737667142550, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -86385,7 +86397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7928332737667142550, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -560
+      value: -596
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26e8bbaf14d0f4142a42cc3e8f24c8bc, type: 3}
