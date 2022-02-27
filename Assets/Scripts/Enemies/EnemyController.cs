@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
+        enemyHealth = GetComponent<EnemyHealth>();
         _characterAnimator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         shootingController = GetComponent<ShootingController>();

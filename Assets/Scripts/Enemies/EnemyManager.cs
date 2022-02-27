@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public Transform[] _spawners;
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefab;
     private int gargoyles;
     private int armors;
     public int totalEnemies;
@@ -22,7 +22,7 @@ public class EnemyManager : MonoBehaviour
     {
         foreach (Transform spawner in _spawners)
         {
-            Instantiate(enemyPrefab, spawner.transform.position, Quaternion.identity);
+            Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Length)], spawner.transform.position, Quaternion.identity);
         }
     }
 

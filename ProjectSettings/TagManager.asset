@@ -12,6 +12,7 @@ TagManager:
   - Obstacles
   - FinalRoom
   - PauseMenu
+  - YouWinMenu
   layers:
   - Default
   - TransparentFX

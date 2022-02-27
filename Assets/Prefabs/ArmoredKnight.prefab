@@ -383,6 +383,7 @@ MonoBehaviour:
   _curArmor: 0
   _timeBetweenDamage: 0.25
   _characterRenderer: {fileID: 0}
+  _isDead: 0
   OnDamaged:
     m_PersistentCalls:
       m_Calls: []
@@ -428,7 +429,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: fc7cf97e4a1c7314d9cede1c029c8695, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -35,7 +35,7 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _characterAnimations = GetComponent<Animator>();
+        //_characterAnimations = GetComponent<Animator>();
         _characterRenderer = GetComponent<SpriteRenderer>();
         _damageController = GetComponent<DamageController>();
         _audioEffects = GetComponent<PlayerAudioEffects>();
