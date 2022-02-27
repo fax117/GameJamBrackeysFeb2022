@@ -52,8 +52,8 @@ GameObject:
   - component: {fileID: 5288503271495870988}
   - component: {fileID: 6431523707453893176}
   - component: {fileID: 8546610915834416809}
-  - component: {fileID: 2403475226185194350}
   - component: {fileID: 7189094278138819025}
+  - component: {fileID: 8473147845396004196}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -441,21 +441,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wolfModeDuration: 10
   _cooldownTimer: 7
---- !u!114 &2403475226185194350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484499799532840074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaaf6b4531c24e48a7c869035e16bc71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootEffect: {fileID: 8300000, guid: 43316aa61c0b96c42b85d5bdff8e9600, type: 3}
-  dyingEffect: {fileID: 8300000, guid: 0d21875cf42b8c1478e22eb77591b4c8, type: 3}
-  hurtEffect: {fileID: 8300000, guid: ea7c9cfdcafb2f24094c9d2fb3d30eb4, type: 3}
 --- !u!82 &7189094278138819025
 AudioSource:
   m_ObjectHideFlags: 0
@@ -552,6 +537,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8473147845396004196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484499799532840074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2533fc582344ee44aaa46f07b865c500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootEffect: {fileID: 8300000, guid: 43316aa61c0b96c42b85d5bdff8e9600, type: 3}
+  dyingEffect: {fileID: 8300000, guid: 0d21875cf42b8c1478e22eb77591b4c8, type: 3}
+  hurtEffect: {fileID: 8300000, guid: ea7c9cfdcafb2f24094c9d2fb3d30eb4, type: 3}
 --- !u!1 &484499800337756699
 GameObject:
   m_ObjectHideFlags: 0

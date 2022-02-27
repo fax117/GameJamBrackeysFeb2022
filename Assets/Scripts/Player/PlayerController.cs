@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 _moveInput;
     private Vector3 _mouseWorldPos;
     private bool shootActive = false;
-    private AudioSource _audioSource;
 
     private void Awake()
     {
@@ -33,7 +32,6 @@ public class PlayerController : MonoBehaviour
         _playerAudioEffects = GetComponent<PlayerAudioEffects>();
         _playerHealth = GetComponent<PlayerHealth>();
         _shootingController = GetComponent<ShootingController>();
-        _audioSource = GetComponent<AudioSource>();
         Cursor.lockState = _cursorMode;
     }
 
